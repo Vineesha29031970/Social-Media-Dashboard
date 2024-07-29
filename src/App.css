@@ -1,0 +1,156 @@
+/* Profile Page Styles */
+.profile-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:white; /* Light background color */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  border-radius: 12px;
+
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 30px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Lift avatar with shadow */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #333; /* Darker text color */
+}
+
+.profile-stats {
+  display: flex;
+  gap: 30px;
+  margin: 15px 0;
+}
+
+.profile-stats span {
+  font-weight: bold;
+  font-size: 18px; /* Increase font size for stats */
+  color: #666; /* Slightly darker text for stats */
+}
+
+.profile-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.profile-tabs button {
+  padding: 12px 24px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666; /* Darker text color */
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-tabs button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.profile-tabs button:hover {
+  background-color: #ddd; /* Lighten background on hover */
+}
+
+.profile-content .posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.profile-content .post img {
+  width: 100%;
+  height: 220px; /* Increased height for larger images */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Add shadow to posts */
+}
+
+.profile-content .followers-list,
+.profile-content .following-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.profile-content .follower,
+.profile-content .following {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff; /* White background for followers/following */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.profile-content .follower img,
+.profile-content .following img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to avatars */
+}
+
+.profile-content .follower span,
+.profile-content .following span {
+  font-size: 16px; /* Font size for names */
+  color: #555; /* Darker text color */
+}
+
+@media (max-width: 768px) {
+  .profile-content .posts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+  }
+
+  .profile-content .followers-list,
+  .profile-content .following-list {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+  }
+
+  .profile-content .follower,
+  .profile-content .following {
+    padding: 10px;
+  }
+
+  .profile-content .follower img,
+  .profile-content .following img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-info h2 {
+    font-size: 24px;
+  }
+
+  .profile-stats span {
+    font-size: 14px;
+  }
+
+  .profile-tabs button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
